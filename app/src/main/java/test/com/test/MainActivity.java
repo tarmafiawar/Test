@@ -81,7 +81,7 @@ public class MainActivity extends ActionBarActivity {
 class ConnectNetworkTask extends AsyncTask<String, Void, String> {
 
     private Exception exception;
-    private static final String TAG = "MyActivity";
+    private static final String TAG = "ConnectNetworkTaskTAG";
 
     protected String doInBackground(String... urls) {
         try {
@@ -98,15 +98,15 @@ class ConnectNetworkTask extends AsyncTask<String, Void, String> {
                     Log.v(TAG, "result : " +result);
                 }
             } catch (ClientProtocolException e) {
-                Log.e("SHIMDEE_LIBS", e.getMessage(), e);
+                Log.e(TAG, e.getMessage(), e);
             }catch (UnknownHostException e) {
-                Log.e("SHIMDEE_LIBS", e.getMessage(), e);
+                Log.e(TAG, e.getMessage(), e);
             }catch (ConnectTimeoutException e) {
-                Log.e("SHIMDEE_LIBS", e.getMessage(), e);
+                Log.e(TAG, e.getMessage(), e);
             } catch (IOException e) {
-                Log.e("SHIMDEE_LIBS", e.getMessage(), e);
+                Log.e(TAG, e.getMessage(), e);
             } catch (Exception e) {
-                Log.e("SHIMDEE_LIBS", e.getMessage(), e);
+                Log.e(TAG, e.getMessage(), e);
             }
 
             return "";
