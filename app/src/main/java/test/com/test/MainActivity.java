@@ -1,6 +1,7 @@
 package test.com.test;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -46,6 +47,10 @@ public class MainActivity extends ActionBarActivity {
                 Log.v(TAG, "test : ");
 
                 new ConnectNetworkTask().execute();
+
+
+                Intent intent = new Intent(getApplicationContext(), ListViewActivity.class);
+                startActivity(intent);
 
             }
         });
